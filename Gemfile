@@ -21,6 +21,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
+end
+
 gem 'jquery-rails'
 
 # Login gem taken from the ruby toolbox
