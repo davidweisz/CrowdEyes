@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CrowdEyes</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>    
+
+<div class="fixed_header"><a id="top" class="headerslide"></a></div>
+<div class="floating_header">
+  <div class="floating_header_bg"></div>
+  <div class="floating_header_content"> <a href="#top" class="smoothSlideLink"></a>
+    <h1>CrowdEyes</h1>
+    <ul class="nav">
+      <li><a href="#contact" class="smoothSlideLink">אודות</a></li>
+      <li><a href="#company" class="smoothSlideLink">מי אנחנו</a></li>
+      <li><a href="#top" class="smoothSlideLink">כניסה</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="green_block">
+  <div class="content_area">
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+		<%= yield %>
+  </div>
+</div>
+
+<div class="clear"></div>
+<div class="footer_style"><a id="contact" class="headerslide"></a>
+  <div class="content_area">
+    <div class="footer_bar">
+    </div>
+    <div class="footer_bar_2">
+      <div class="left"><p>&copy; 2012 CrowdEyes Ltd.</p></div>
+      <div class="right">
+        <a href="#"><%= image_tag "facebook_icon.png" %></a>&nbsp;&nbsp;&nbsp;
+        <a href="#" target="_blank"><%= image_tag "twitter_icon.png" %></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
