@@ -1,0 +1,30 @@
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>
+	google.load('visualization', '1', {
+		packages : ['gauge']
+	});
+	google.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable(
+			[['Label', 'Value'], 
+			['SuckerMeter', <%= @sucker_score %>]]);
+
+		var options = {
+			width : 400,
+			height : 400,
+			greenFrom: 0,
+			greenTo: 30,
+			yellowFrom : 30,
+			yellowTo : 70,
+			redFrom : 70,
+			redTo : 100,
+			minorTicks : 5
+		};
+
+		var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+		chart.draw(data, options);
+	}
+</script>
+<div style="margin-left: 30%; margin-right: auto; display: block; position: relative">    
+	<div id='chart_div'></div>
+</div>

@@ -1,4 +1,6 @@
 CrowdEyes::Application.routes.draw do
+  get "suckermeter/index"
+
   get "member/index"
 
   get "home/index"

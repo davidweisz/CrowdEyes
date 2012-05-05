@@ -1,0 +1,2 @@
+module SuckermeterHelper
+end
